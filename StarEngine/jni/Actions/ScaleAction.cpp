@@ -37,13 +37,12 @@ namespace star
 	
 	void ScaleAction::Update(const Context & context)
 	{
-		float32 dt = float32(context.mTimeManager->GetSeconds());
-		m_CurrentSeconds += dt;
+		m_CurrentSeconds += float32(context.mTimeManager->GetSeconds());
 		
 		m_pParent->GetTransform()->Scale
-			(
+		(
 			star::Lerp(m_BeginValue, m_EndValue, m_CurrentSeconds / m_Seconds)
-			);
+		);
 	}
 	
 	void ScaleAction::Restart()
