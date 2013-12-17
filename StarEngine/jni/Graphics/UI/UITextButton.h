@@ -56,9 +56,7 @@ namespace star
 		virtual void AfterInitialized();
 
 		void SetIdleColor(const Color & color);
-#ifdef DESKTOP
 		void SetHoverColor(const Color & color);
-#endif
 		void SetClickColor(const Color & color);
 		void SetDisableColor(const Color & color);
 
@@ -71,13 +69,13 @@ namespace star
 		void TranslateTextY(float32 y);
 		void SetHorizontalAlignmentText(
 			HorizontalAlignment alignment,
-			bool redefine_center = true
+			bool redefineCenter = true
 			);
 		void SetVerticalAlignmentText(
 			VerticalAlignment alignment,
-			bool redefine_center = true
+			bool redefineCenter = true
 			);
-		void SetTextCentered(bool redefine_center = true);
+		void SetTextCentered(bool redefineCenter = true);
 
 	protected:
 		virtual void GoIdle();

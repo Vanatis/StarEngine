@@ -133,12 +133,11 @@ namespace star
 		m_StateColors[uint8(ElementStates::IDLE)] = color;
 	}
 
-#ifdef DESKTOP
+
 	void UITextButton::SetHoverColor(const Color & color)
 	{
 		m_StateColors[uint8(ElementStates::HOVER)] = color;
 	}
-#endif
 
 	void UITextButton::SetClickColor(const Color & color)
 	{
@@ -182,29 +181,29 @@ namespace star
 
 	void UITextButton::SetHorizontalAlignmentText(
 		HorizontalAlignment alignment,
-		bool redefine_center
+		bool redefineCenter
 		)
 	{
 		m_pTextField->SetHorizontalAlignment(
 			alignment,
-			redefine_center
+			redefineCenter
 			);
 	}
 
 	void UITextButton::SetVerticalAlignmentText(
 		VerticalAlignment alignment,
-		bool redefine_center
+		bool redefineCenter
 		)
 	{
 		m_pTextField->SetVerticalAlignment(
 			alignment,
-			redefine_center
+			redefineCenter
 			);
 	}
 	
-	void UITextButton::SetTextCentered(bool redefine_center)
+	void UITextButton::SetTextCentered(bool redefineCenter)
 	{
-		m_pTextField->SetAlignmentCentered(redefine_center);
+		m_pTextField->SetAlignmentCentered(redefineCenter);
 	}
 	
 	void UITextButton::GoIdle()

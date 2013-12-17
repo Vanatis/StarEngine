@@ -1,10 +1,10 @@
-#include "ScaleAction.h"
+#include "TimedScaleAction.h"
 #include "../Objects/Object.h"
 #include "../Helpers/Math.h"
 
 namespace star
 {
-	ScaleAction::ScaleAction(
+	TimedScaleAction::TimedScaleAction(
 		float32 seconds,
 		float32 begin,
 		float32 end,
@@ -17,7 +17,7 @@ namespace star
 	{
 	}
 	
-	ScaleAction::ScaleAction(
+	TimedScaleAction::TimedScaleAction(
 		const tstring & name,
 		float32 seconds,
 		float32 begin,
@@ -31,11 +31,11 @@ namespace star
 	{
 	}
 	
-	ScaleAction::~ScaleAction()
+	TimedScaleAction::~TimedScaleAction()
 	{	
 	}
 	
-	void ScaleAction::Update(const Context & context)
+	void TimedScaleAction::Update(const Context & context)
 	{
 		m_CurrentSeconds += float32(context.mTimeManager->GetSeconds());
 		
@@ -45,7 +45,7 @@ namespace star
 		);
 	}
 	
-	void ScaleAction::Restart()
+	void TimedScaleAction::Restart()
 	{
 		m_CurrentSeconds = 0;
 	}

@@ -3,7 +3,7 @@
 
 namespace star
 {
-	class SpritesheetComponent;
+	class SpriteSheetComponent;
 
 	class UIAnimatedButton : public UIUserElement
 	{
@@ -27,11 +27,11 @@ namespace star
 
 		virtual void SetHorizontalAlignment(
 			HorizontalAlignment alignment,
-			bool redefine_center = true
+			bool redefineCenter = true
 			);
 		virtual void SetVerticalAlignment(
 			VerticalAlignment alignment,
-			bool redefine_center = true
+			bool redefineCenter = true
 			);
 
 		void EnableContiniousAnimation(bool enabled);
@@ -47,7 +47,7 @@ namespace star
 		virtual void GoDown();
 		virtual void GoDisable();
 
-		SpritesheetComponent *m_pButtonSprite;
+		SpriteSheetComponent *m_pButtonSprite;
 		bool m_ContiniousAnimation;
 
 	private:

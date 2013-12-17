@@ -133,12 +133,10 @@ namespace star
 		m_StateColors[uint8(ElementStates::IDLE)] = color;
 	}
 
-#ifdef DESKTOP
 	void UIAnimatedTextButton::SetHoverColor(const Color & color)
 	{
 		m_StateColors[uint8(ElementStates::HOVER)] = color;
 	}
-#endif
 
 	void UIAnimatedTextButton::SetClickColor(const Color & color)
 	{
@@ -182,23 +180,23 @@ namespace star
 
 	void UIAnimatedTextButton::SetHorizontalAlignmentText(
 		HorizontalAlignment alignment,
-		bool redefine_center
+		bool redefineCenter
 		)
 	{
 		m_pTextField->SetHorizontalAlignment(
 			alignment,
-			redefine_center
+			redefineCenter
 			);
 	}
 
 	void UIAnimatedTextButton::SetVerticalAlignmentText(
 		VerticalAlignment alignment,
-		bool redefine_center
+		bool redefineCenter
 		)
 	{
 		m_pTextField->SetVerticalAlignment(
 			alignment,
-			redefine_center
+			redefineCenter
 			);
 	}
 	
